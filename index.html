@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Instagram Data Reports - LAKSH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .shell {
+      background: radial-gradient(circle at top, #1f2937, #020617);
+      border-radius: 18px;
+      padding: 32px 28px;
+      max-width: 960px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .title-main {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .title-main h1 {
+      font-size: 22px;
+      margin: 0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #f9fafb;
+    }
+    .title-main span {
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    .pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.1);
+      color: #bbf7d0;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 14px;
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.18s ease, transform 0.18s ease,
+        box-shadow 0.18s ease, background 0.18s ease;
+    }
+    .card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 1);
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .card-title span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+    }
+    .card-body {
+      font-size: 13px;
+      color: #9ca3af;
+      line-height: 1.5;
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: #e5e7eb;
+    }
+    .badge-soft {
+      border-color: rgba(56, 189, 248, 0.5);
+      color: #7dd3fc;
+    }
+    .link {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      color: #e5e7eb;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: radial-gradient(circle at top left, #0f172a, #020617);
+    }
+    .link:hover {
+      border-color: #38bdf8;
+      color: #e0f2fe;
+    }
+    .link-icon {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+    .note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: #6b7280;
+    }
+    @media (max-width: 640px) {
+      .shell {
+        margin: 16px;
+        padding: 22px 18px;
+      }
+      .title-main h1 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="title-row">
+      <div class="title-main">
+        <h1>Instagram Data Reports</h1>
+        <span>LAKSH · Payments · Reels · Creator insights</span>
+      </div>
+      <div class="pill">Static analytics</div>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <div class="card-title">
+          <div>Creator Comparison</div>
+          <span>Summary</span>
+        </div>
+        <p class="card-body">
+          Full comparison of LAKSH-handled creators across the payment sheet
+          and reels data: counts, mismatches, and extra payment rows per
+          creator.
+        </p>
+        <footer class="card-footer">
+          <span class="badge badge-soft">Payments vs Reels</span>
+          <a href="laksh_creator_comparison_report.html" class="link">
+            <span class="link-icon">↗</span>
+            <span>Open report</span>
+          </a>
+        </footer>
+      </article>
+
+      <article class="card">
+        <div class="card-title">
+          <div>LAKSH Payments Table</div>
+          <span>Detail</span>
+        </div>
+        <p class="card-body">
+          Clean table for all rows handled by LAKSH from the payment sheet,
+          with creator-wise sequence numbers and bank details.
+        </p>
+        <footer class="card-footer">
+          <span class="badge">Payments · CSV view</span>
+          <a href="laksh_data_table.html" class="link">
+            <span class="link-icon">↗</span>
+            <span>Open table</span>
+          </a>
+        </footer>
+      </article>
+
+      <article class="card">
+        <div class="card-title">
+          <div>Raw Data (Download)</div>
+          <span>Sources</span>
+        </div>
+        <p class="card-body">
+          Original CSVs used to build these reports. Open directly in your
+          browser or download and use in Sheets / Excel.
+        </p>
+        <footer class="card-footer">
+          <span class="badge">CSV files</span>
+          <a href="laksh_data.csv" class="link">
+            <span class="link-icon">↓</span>
+            <span>laksh_data.csv</span>
+          </a>
+        </footer>
+      </article>
+    </section>
+
+    <p class="note">
+      All pages are static HTML and safe to host as a Render static site.
+      If you add new reports later, just link them from this index.
+    </p>
+  </main>
+</body>
+</html>
+
+
